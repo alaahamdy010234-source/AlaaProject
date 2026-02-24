@@ -1,8 +1,8 @@
-•⁠  ⁠{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -36,11 +36,15 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 50px 90px;
+  padding: 30px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
+.navbar {
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
@@ -48,8 +52,7 @@ header {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  margin-left: 35px;
-
+  margin-left: 28px;
 }
 .navbar a:hover,
 .navbar a.active{  
@@ -72,11 +75,21 @@ header a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
   padding: 50px;
+  flex-wrap: wrap;
 }
 
 .hero .info {
+  flex: 1 1 380px;
   max-width: 50%;
+}
+
+.image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero .highlight {
@@ -120,6 +133,67 @@ header a:hover {
   width: 300px;
   border-radius: 20px;
   animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive: tablets and phones */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 30px;
+  }
+
+  .navbar a {
+    margin-left: 18px;
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero .info {
+    max-width: 100%;
+  }
+
+  .image {
+    margin-top: 18px;
+  }
+
+  .image img {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  .navbar a {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 8px 14px;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
 }
 
 /* حركة الصورة */
